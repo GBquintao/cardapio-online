@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital - Restaurante Delícia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo">Restaurante Delícia</div>
+            <p>Cardápio Digital</p>
+            <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20fazer%20um%20pedido" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Pedir pelo WhatsApp
+            </a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar no cardápio...">
+        </div>
+        
+        <div class="checkin-section">
+            <h2 class="checkin-title">Faça seu check-in pelo WhatsApp</h2>
+            <p>Envie uma mensagem para confirmar sua presença e receber atendimento mais rápido</p>
+            <a href="https://wa.me/5511999999999?text=Olá,%20estou%20no%20restaurante%20e%20gostaria%20de%20fazer%20meu%20check-in" class="whatsapp-btn" style="background-color: white; color: var(--whatsapp-dark-green);">
+                <i class="fab fa-whatsapp"></i> Fazer Check-in
+            </a>
+        </div>
+        
+        <div class="category" data-category="entradas">
+            <h2 class="category-title">Entradas</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-name="bruschetta" data-price="18.90">
+                    <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bruschetta" class="item-image">
+                    <div class="item-info">
+                        <h3 class="item-name">Bruschetta</h3>
+                        <p class="item-description">Pão italiano torrado com tomate fresco, manjericão e azeite de oliva</p>
+                        <p class="item-price">R$ <span class="price-value">18,90</span></p>
+                        <button class="order-btn add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-name="carpaccio" data-price="32.50">
+                    <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Carpaccio" class="item-image">
+                    <div class="item-info">
+                        <h3 class="item-name">Carpaccio</h3>
+                        <p class="item-description">Finas fatias de filé mignon cru, com rúcula, parmesão e molho de mostarda</p>
+                        <p class="item-price">R$ <span class="price-value">32,50</span></p>
+                        <button class="order-btn add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category" data-category="principais">
+            <h2 class="category-title">Pratos Principais</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-name="filé mignon" data-price="68.90">
+                    <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Filé Mignon" class="item-image">
+                    <div class="item-info">
+                        <h3 class="item-name">Filé Mignon</h3>
+                        <p class="item-description">Filé mignon 250g, acompanha batatas rústicas e legumes grelhados</p>
+                        <p class="item-price">R$ <span class="price-value">68,90</span></p>
+                        <button class="order-btn add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-name="risoto de funghi" data-price="42.90">
+                    <img src="fungi.jpg" alt="Risoto" class="item-image">
+                    <div class="item-info">
+                        <h3 class="item-name">Risoto de Funghi</h3>
+                        <p class="item-description">Risoto cremoso com cogumelos frescos e parmesão</p>
+                        <p class="item-price">R$ <span class="price-value">42,90</span></p>
+                        <button class="order-btn add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category" data-category="sobremesas">
+            <h2 class="category-title">Sobremesas</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-name="tiramisu" data-price="22.50">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tiramisu" class="item-image">
+                    <div class="item-info">
+                        <h3 class="item-name">Tiramisu</h3>
+                        <p class="item-description">Clássica sobremesa italiana com café, mascarpone e cacau</p>
+                        <p class="item-price">R$ <span class="price-value">22,50</span></p>
+                        <button class="order-btn add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-name="brownie" data-price="18.90">
+                    <img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Brownie" class="item-image">
+                    <div class="item-info">
+                        <h3 class="item-name">Brownie</h3>
+                        <p class="item-description">Brownie de chocolate com sorvete de baunilha e calda</p>
+                        <p class="item-price">R$ <span class="price-value">18,90</span></p>
+                        <button class="order-btn add-to-cart">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-btn" id="cartBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+    
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h2>Seu Pedido</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Itens do carrinho serão adicionados aqui via JavaScript -->
+        </div>
+        <div class="cart-total">
+            Total: R$ <span id="cartTotal">0,00</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">
+            Finalizar Pedido no WhatsApp
+        </button>
+    </div>
+    
+    <footer>
+        <p>Restaurante Delícia &copy; <span id="currentYear"></span> - Todos os direitos reservados</p>
+        <p>WhatsApp: (11) 99999-9999</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
